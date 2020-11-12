@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 // Component imports
 import Nav from '../Nav/Nav';
@@ -21,7 +20,7 @@ const pages = [
 
 const Home = () => {
   return (
-    <Nav pages={pages} siteName="Portfolio"/>
+    <Nav pages={pages} siteName="Portfolio" selected={"/home"}/>
   )
 }
 

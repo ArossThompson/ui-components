@@ -1,20 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
-const Nav = ({ pages, siteName }) => {
-
-  const [activePage, setActivePage] = useState("/home")
-
-  
+const Nav = ({ pages, siteName, selected }) => { 
   const navPages = pages.map((page, index) => {
     return (
       <li 
         key={index}
-        className={page.pathname === activePage ? "active" : ""}
-        onClick={() => {
-          setActivePage(page.pathname)
-          console.log(page.pathname)
-        }}
+        className={page.pathname === selected ? "active" : ""}
       >
         <Link to={page.pathname}>{page.pagename}</Link>
       </li>

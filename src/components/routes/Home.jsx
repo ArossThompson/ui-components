@@ -11,7 +11,6 @@ const Home = () => {
   return (
     <div>
       <Nav pages={pages} siteName="Portfolio" selected={"/home"}></Nav>
-      <Search/>
     </div>
     
   )

@@ -18,7 +18,7 @@ const Nav = ({ pages, siteName, selected }) => {
   
   
   return (
-    <nav className="navbar navbar-default">
+    <nav className="navbar navbar-default topnav">
       <div className="container-fluid nav-container">
         <div className="navbar-header">
           <Link className="navbar-brand" to="/home">{siteName}</Link>
@@ -26,8 +26,8 @@ const Nav = ({ pages, siteName, selected }) => {
         <ul className="nav navbar-nav">
           {navPages}
         </ul>
+        <Search />
       </div>
-
     </nav>
   )
   

@@ -6,32 +6,15 @@ import './app.scss';
 import Home from './components/routes/Home';
 import About from './components/routes/About';
 import Projects from './components/routes/Projects';
+import Search from './components/Search/Search';
 
-const pages = [
-  {
-    pathname: "/home",
-    pagename: "Home"
-  },
-  {
-    pathname: "/about",
-    pagename: "About"
-  },
-  {
-    pathname: "/projects",
-    pagename: "Projects"
-  },
-]
+// Constants
+import { pages } from './utils/constants';
 
 
 const App = () => {
   return (
-    <main>
-      <Switch>
-          <Route path="/home" component={Home} exact />
-          <Route path="/about" component={About} />
-          <Route path="/projects" component={Projects} />
-      </Switch>
-    </main>
+    <Search />
   )
 }
 

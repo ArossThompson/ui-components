@@ -9,12 +9,18 @@ import Projects from './components/routes/Projects';
 import Search from './components/Search/Search';
 
 // Constants
-import { pages } from './utils/constants';
+import { pages } from './utils/constants'
 
 
 const App = () => {
   return (
-    <Search />
+    <main>
+      <Switch>
+          <Route path="/home" component={Home} exact />
+          <Route path="/about" component={About} />
+          <Route path="/projects" component={Projects} />
+      </Switch>
+    </main>
   )
 }
 

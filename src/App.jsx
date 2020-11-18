@@ -16,7 +16,7 @@ import { pages } from './utils/constants'
 const App = () => {
   return (
     <div>
-      <Nav pages={pages} siteName="Portfolio" selected={window.location.pathname}/>
+      <Nav pages={pages} siteName="Portfolio"/>
       <Route path="/home">
         <Home />
       </Route>

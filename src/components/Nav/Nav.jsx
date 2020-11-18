@@ -1,32 +1,38 @@
 import React, { useEffect, useState } from 'react';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import Link from '../Link/Link';
 
 import Search from '../Search/Search';
 
-const Nav = ({ pages, siteName, selected }) => { 
+const Nav = ({ pages, siteName}) => {
+  
+  // Update which nav element has active-route styling applied to it
+  const [activeRoute, setActiveRoute] = useState(window.location.pathname)
+  const updateActive = (e) => {
+    setActiveRoute(e.target.pathname);
+  }
+
   const navPages = pages.map((page, index) => {
     return (
       <li 
+        onClick={updateActive}
         key={index}
-        className={page.pathname === selected ? "active" : ""}
+        className={page.pathname === activeRoute ? "active" : ""}
       >
-        <Link to={page.pathname}>{page.pagename}</Link>
+        <Link href={page.pathname}>{page.pagename}</Link>
       </li>
       
     )
-  })
-  
+  });
   
   return (
     <nav className="navbar navbar-default topnav">
       <div className="container-fluid nav-container">
         <div className="navbar-header">
-          <Link className="navbar-brand" to="/home">{siteName}</Link>
+          <Link className="navbar-brand" href="/home">{siteName}</Link>
         </div>
         <ul className="nav navbar-nav">
           {navPages}
         </ul>
-        <Search />
       </div>
     </nav>
   )

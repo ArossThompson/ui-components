@@ -5,7 +5,7 @@ import Nav from '../Nav/Nav';
 
 const About = () => {
   return (
-    <div>About</div>
+    <div>Projects</div>
   )
 }
 

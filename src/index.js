@@ -5,7 +5,4 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import App from './App';
 
 
-ReactDom.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>, document.querySelector('#root'));
+ReactDom.render(<App />, document.querySelector('#root'));
